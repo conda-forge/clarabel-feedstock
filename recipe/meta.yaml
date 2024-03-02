@@ -1,5 +1,5 @@
 {% set name = "clarabel" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.python.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b9da56f522806a847f3ece08f5f21fab7506eec3148b22446190de5206dd1e6f
+  sha256: a30ab135f475c5bc78329fd7df575291155e6055bcaf02124eb610b8ad176396
 
 build:
   number: 0
