@@ -1,5 +1,5 @@
 {% set name = "clarabel" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.python.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a30ab135f475c5bc78329fd7df575291155e6055bcaf02124eb610b8ad176396
+  sha256: d3718417396fccb79e74a55e0e891d1c602bc23ba7877666f1c2502fdd2623ea
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
     - cross-python_{{ target_platform }}    # [build_platform != target_platform]
     - maturin                               # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
   host:
@@ -33,7 +34,6 @@ requirements:
     - pip
   run:
     - python
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   files:
