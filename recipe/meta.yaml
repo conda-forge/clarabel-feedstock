@@ -50,6 +50,7 @@ test:
     - numpy
     - scipy
     - python
+    - cffi
 
 about:
   home: https://oxfordcontrol.github.io/ClarabelDocs/
