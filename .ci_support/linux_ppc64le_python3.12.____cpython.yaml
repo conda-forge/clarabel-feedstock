@@ -15,7 +15,7 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 numpy:
-- '1.26'
+- '2'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -25,7 +25,4 @@ python:
 rust_compiler:
 - rust
 target_platform:
-- linux-64
-zip_keys:
-- - python
-  - numpy
+- linux-ppc64le
