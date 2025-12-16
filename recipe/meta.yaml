@@ -34,6 +34,9 @@ requirements:
     - pip
   run:
     - python
+    - numpy
+    - scipy
+    - cffi
 
 test:
   files:
@@ -62,7 +65,7 @@ about:
   summary: 'Python interface for Clarabel: Interior Point Conic Optimization Solver'
   description: |
     Clarabel is an interior point numerical solver for convex optimization problems implemented
-    in Rust.  It solves linear programs (LPs), quadratic programs (QPs), second-order cone programs 
+    in Rust.  It solves linear programs (LPs), quadratic programs (QPs), second-order cone programs
     (SOCPs) and semidefinite programs (SDPs). It also solves problems with exponential, power
     cone and generalized power cone constraints.
   doc_url: https://oxfordcontrol.github.io/ClarabelDocs/
